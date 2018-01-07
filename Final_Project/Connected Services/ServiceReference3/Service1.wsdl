@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar40.fulton.asu.edu/Page8/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar40.fulton.asu.edu/Page8/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_SetSortby_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSortby" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetSortby_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSortbyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReturnSearchedUrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnSearchedUrl" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReturnSearchedUrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnSearchedUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetNewsChannel_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetNewsChannel" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetNewsChannel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetNewsChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MakeRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakeRequest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MakeRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakeRequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="SetSortby">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetSortby" message="tns:IService1_SetSortby_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetSortbyResponse" message="tns:IService1_SetSortby_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnSearchedUrl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ReturnSearchedUrl" message="tns:IService1_ReturnSearchedUrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ReturnSearchedUrlResponse" message="tns:IService1_ReturnSearchedUrl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetNewsChannel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetNewsChannel" message="tns:IService1_SetNewsChannel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetNewsChannelResponse" message="tns:IService1_SetNewsChannel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakeRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MakeRequest" message="tns:IService1_MakeRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MakeRequestResponse" message="tns:IService1_MakeRequest_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetSortby">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetSortby" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnSearchedUrl">
+      <soap:operation soapAction="http://tempuri.org/IService1/ReturnSearchedUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetNewsChannel">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetNewsChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeRequest">
+      <soap:operation soapAction="http://tempuri.org/IService1/MakeRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://webstrar40.fulton.asu.edu/Page8/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<tns:Staffs xmlns:tns="http://www.public.asu.edu/~eyang12/Staff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.public.asu.edu/~eyang12/Staff Staff.xsd ">
+  <tns:Staff>
+    <tns:Username>admin</tns:Username>
+    <tns:Password>admin</tns:Password>
+  </tns:Staff>
+  <Staff xmlns="http://www.public.asu.edu/~eyang12/Staff">
+    <Username xmlns="">TA</Username>
+    <Password xmlns="">Cse445ta!</Password>
+  </Staff>
+</tns:Staffs>
